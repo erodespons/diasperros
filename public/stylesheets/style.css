@@ -1,6 +1,6 @@
 .dp-nav {
   background-color: #2fa172;
-  border-bottom: solid grey 1px;
+  border-bottom: solid 1px #1A1A1A;
   margin: 0 auto;
   text-align: center;
 }
@@ -23,6 +23,7 @@
 }
 .btn-primary {
   background-color: #2fa172;
+  border: solid 1px #1A1A1A;
   border-width: 0;
 }
 .btn-primary:hover {
@@ -58,6 +59,7 @@ body {
   margin: 0 auto;
 }
 .main-navbar {
+  z-index: 1000;
   background: #ffffff;
   display: flex;
   flex-direction: row;
@@ -181,6 +183,7 @@ body {
 }
 
 .pd-footer {
+  border-top: solid 1px #1A1A1A;
   background-color: #2fa172;
 }
 
