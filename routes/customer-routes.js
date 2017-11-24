@@ -2,7 +2,7 @@ const express = require("express");
 const customerRoutes = express.Router();
 const ensureLogin = require("connect-ensure-login");
 const Order = require("../models/Order");
-const User = require("../models/user");
+const User = require("../models/User");
 
 // Private routes
 customerRoutes.get("/customer-area", ensureLogin.ensureLoggedIn(), (req, res) => {
