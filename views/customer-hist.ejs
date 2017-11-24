@@ -1,0 +1,21 @@
+<% if (user && !user.isProvider) { %>
+
+  <% include ./partials/customer-nav %>
+
+  <h2>Historial de pedidos:</h2>
+
+  <ul class="list-group">
+
+  <% orders.forEach((oneOrder) => { %>
+    <li class="list-group-item">
+      <h4> <%= oneOrder.date %> </h4>
+      <ul>
+        <li> <b>User</b>: <%= oneOrder %> </li>
+      </ul>
+    </li>
+  <% }) %>
+</ul>
+
+<% } else if(user) {%>
+
+<% } %>

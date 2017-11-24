@@ -1,0 +1,75 @@
+<form action="/signup" method="POST" class="user-forms">
+  <h2>Registro para proveedores</h2>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="firstName">Nombre</label>
+      <input type="text" class="form-control" name="firstName" placeholder="Ej. Mariano">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="lastName">Apellidos</label>
+      <input type="text" class="form-control" name="lastName" placeholder="Ej. Mofetti">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" name="username" placeholder="Ej. mariano@mofetti-holding.com">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Contraseña</label>
+      <input type="password" class="form-control" name="password" placeholder="Ej. 123..">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Dirección</label>
+    <input type="text" class="form-control" name="address" placeholder="Ej. Calle Gran Vía 2">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Ciudad</label>
+      <input type="text" class="form-control" name="city" placeholder="Ej. Madrid">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="zipCode">Código Postal</label>
+      <input type="number" class="form-control" name="zipCode" placeholder="Ej. 28013">
+    </div>
+  </div>
+  <div>
+    <label for="fee-input"> Set your fee </label>
+    <input type="number" class="form-control" name="fee" id="fee-input" placeholder="15€">
+  </div>
+
+  <div>
+    <div>
+      <label for="description-input"> Descripción </label>
+      <textarea type="text" rows="4" cols="50" class="form-control" name="description" id="description-input" placeholder="Texto aquí...">
+ </textarea>
+
+    </div>
+    <div>
+      <input type="hidden" class="form-control" name="isProvider" id="rol-input" value="true">
+    </div>
+    <label for="category"> Categoria </label>
+    <div class="form-row">
+      <div class="checkbox">
+        <label><input name="category" type="checkbox" value="Peluquería">Peluqueria</label>
+      </div>
+      <div class="checkbox">
+        <label><input name="category" type="checkbox" value="Paseo">Paseo</label>
+      </div>
+      <div class="checkbox">
+        <label><input name="category" type="checkbox" value="Guarderia">Guarderia</label>
+      </div>
+      <div class="checkbox">
+        <label><input name="category" type="checkbox" value="Veterinario">Veterinario</label>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Registrar</button>
+  <% if (typeof message !== "undefined") { %>
+    <div class="error-message">
+      <%= message %>
+    </div>
+    <% } %>
+      <input id="signup-form" name="provider" type="hidden">

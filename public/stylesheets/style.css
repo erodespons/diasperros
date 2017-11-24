@@ -1,0 +1,198 @@
+.dp-nav {
+  background-color: #2fa172;
+  border-bottom: solid grey 1px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dp-nav a {
+  color: white;
+}
+.nav-item {
+  text-align: center;
+  margin: 0;
+  padding: 1%
+}
+#customer-area-services {
+  padding: 1%;
+  margin: 0;
+}
+.user-forms {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.btn-primary {
+  background-color: #2fa172;
+  border-width: 0;
+}
+.btn-primary:hover {
+  background-color: white;
+  border: solid 1px #2fa172;
+  color: #2fa172;
+}
+
+.btn-work {
+  font-size: 2rem;
+  text-align: center;
+  color: #2fa172;
+  height: 60px;
+  background-color: white;
+  border-width: 0;
+}
+.btn-work:hover {
+  background-color: #2fa172;
+  border: solid 1px white;
+  color: white;
+}
+
+body {
+  font: 18px/1.33 'Montserrat', Helvetica Neue, sans-serif;
+  color: #1A1A1A;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-navbar {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  padding: 0 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-menu {
+  text-align: right;
+}
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-menu li {
+  display: inline-block;
+}
+.main-menu li:not(:last-child) {
+  margin-right: 1.5em;
+}
+.main-menu a {
+  color: #1A1A1A;
+  text-decoration: none;
+}
+.main-navbar ~ .splash-landing {
+  margin-top: 65px;
+}
+.splash-landing {
+  background: #000 url(../images/all-pets.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  height: calc(100vh - 65px); /* Maybe problematic in some browsers */
+  padding-top: 25vh;
+  box-sizing: border-box;;
+}
+.splash-landing h1 {
+  font-size: 4em;
+  margin: 0 auto .5em;
+  font-weight: 600;
+  color: #2fa172;
+  text-shadow: -1px 0 #212529, 0 1px #212529, 1px 0 #212529, 0 -1px #212529;
+}
+.lead {
+  font-size: 1.333em;
+  font-weight: 300;
+}
+.features-list {
+  margin-top: 3%;
+  text-align: center;
+}
+.big-features {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.big-features li {
+  box-sizing: border-box;
+  width: 33.333%;
+  max-width: 15em;
+  padding: 3em 2em;
+}
+.big-features h3 {
+  color: #2fa172;
+}
+.feature-icon {
+  max-height: 100px;
+  width: auto;
+}
+.dp-background {
+  box-sizing: border-box;
+  background: #2fa172 url(../images/dias-perros-logo.svg) no-repeat center;
+  background-size: 100px auto;
+  color: #ffffff;
+  padding: 1em 5em;
+  margin-bottom: 2em;
+}
+.dp-background div {
+  margin-bottom: 1%;
+}
+.dp-background h2 {
+  margin-top: 2%;
+}
+.dp-background li {
+  margin-top: 4%;
+}
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.columns.two col {
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.standard-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 300px;
+}
+.app-screenshot {
+  max-width: 280px;
+}
+
+.pd-footer {
+  background-color: #2fa172;
+}
+
+.splash-event {
+  background-size: cover;
+  color: #1A1A1A;
+  text-align: center;
+  height: calc(100vh - 65px); /* Maybe problematic in some browsers */
+  padding-top: 25vh;
+  box-sizing: border-box;;
+}
+.splash-event h2 {
+  font-size: 3em;
+  margin: 0 auto .5em;
+  font-weight: 600;
+  color: #2fa172;
+  text-shadow: -1px 0 #212529, 0 1px #212529, 1px 0 #212529, 0 -1px #212529;
+}
+
+.provider-area {
+  margin: 3%;
+}

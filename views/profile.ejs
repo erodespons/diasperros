@@ -1,0 +1,140 @@
+<% if (user && !user.isProvider) { %>
+
+  <% include ./partials/customer-nav %>
+
+    <form action="/profile" method="POST" id="signup-form" class="user-forms">
+      <h2>Datos Personales</h2>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">Nombre</label>
+          <input type="text" class="form-control" name="firstName" value="<%= user.firstName %>">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName">Apellidos</label>
+          <input type="text" class="form-control" name="lastName" value="<%= user.lastName %>">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" name="username" value="<%= user.username %>">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Contraseña</label>
+          <input type="password" class="form-control" name="password" value="*****">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Dirección</label>
+        <input type="text" class="form-control" name="address" value="<%= user.address %>">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Ciudad</label>
+          <input type="text" class="form-control" value="city" value="<%= user.city %>">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="zipCode">Código Postal</label>
+          <input type="number" class="form-control" name="zipCode" value="<%= user.zipCode %>">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="newsletter" <% if (user.newsletter) {%> checked <%}%>>Suscribirme a la newsletter
+        </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Actualizar datos</button>
+      <% if (typeof message !== "undefined") { %>
+        <div class="error-message">
+          <%= message %>
+        </div>
+        <% } %>
+    </form>
+
+    <% } else if(user && user.isProvider) {%>
+
+      <% include ./partials/customer-nav %>
+
+        <form action="/profile" method="POST" id="signup-form" class="user-forms">
+          <h2>Datos Personales</h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">Nombre</label>
+              <input type="text" class="form-control" name="firstName" value="<%= user.firstName %>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Apellidos</label>
+              <input type="text" class="form-control" name="lastName" value="<%= user.lastName %>">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" name="username" value="<%= user.username %>">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Contraseña</label>
+              <input type="password" class="form-control" name="password" value="*****">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputAddress">Dirección</label>
+            <input type="text" class="form-control" name="address" value="<%= user.address %>">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputCity">Ciudad</label>
+              <input type="text" class="form-control" name="city" value="<%= user.city %>">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="zipCode">Código Postal</label>
+              <input type="number" class="form-control" name="zipCode" value="<%= user.zipCode %>">
+            </div>
+          </div>
+          <div>
+            <label for="fee-input"> ¿Cúanto vas a cobrar por hora? </label>
+            <input type="number" class="form-control" name="fee" value="<%= user.fee %>">
+          </div>
+          <div>
+            <div>
+              <label for="description-input"> Descripción </label>
+              <textarea type="text" rows="4" cols="50" class="form-control" name="description" value="<%= user.description %>">
+    </textarea>
+            </div>
+            <div>
+              <input type="hidden" class="form-control" name="isProvider" value="true">
+            </div>
+            <label for="category"> Categoria </label>
+            <div class="form-row">
+              <div class="checkbox">
+                <label><input name="category" type="checkbox" value="Peluquería" <% if (user.category.indexOf("Peluquería")>-1) {%> checked <%}%>>Peluquería</label>
+              </div>
+              <div class="checkbox">
+                <label><input name="category" type="checkbox" value="Paseo" <% if (user.category.indexOf("Paseo")>-1) {%> checked <%}%>>Paseo</label>
+              </div>
+              <div class="checkbox">
+                <label><input name="category" type="checkbox" value="Guardería" <% if (user.category.indexOf("Guardería")>-1) {%> checked <%}%>>Guarderia</label>
+              </div>
+              <div class="checkbox">
+                <label><input name="category" type="checkbox" value="Veterinario" <% if (user.category.indexOf("Veterinario")>-1) {%> checked <%}%>>Veterinario</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="newsletter" <% if (user.newsletter) {%> checked <%}%>>Suscribirme a la newsletter
+          </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Actualizar datos</button>
+          <% if (typeof message !== "undefined") { %>
+            <div class="error-message">
+              <%= message %>
+            </div>
+            <% } %>
+        </form>
+
+        <% } %>

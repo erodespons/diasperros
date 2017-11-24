@@ -1,0 +1,72 @@
+<% if (user && !user.isProvider) { %>
+
+  <% include ./partials/customer-nav %>
+
+  <div id="customer-area-services">
+    <form action="/customer-area" method="POST">
+      <h3>Contratar un servicio</h3>
+      <div class="form">
+        <div class="form-group">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Tipo de servicio:</label>
+          <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="category">
+            <option selected>Escoge...</option>
+            <option value="PELUQERIA">Peluquería</option>
+            <option value="PASEO">Paseo</option>
+            <option value="GUARDERIA">Guardería</option>
+            <option value="VETERINARIO">Veterinario</option>
+          </select>
+        </div>
+
+        <div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker5'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker({
+                    defaultDate: "11/1/2013",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+            });
+        </script>
+    </div>
+</div>
+
+
+        <!-- <label class="mr-sm-2" for="date">Hora</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="date">
+          <option selected>Escoge...</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+        </select> -->
+
+
+      </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <% } else if(user && user.isProvider) {%>
+
+  <% include ./partials/customer-nav %>
+  <div class="provider-area">
+    <h2>Bienvenido a tu área privada en Días Perros.</h2>
+  </div>
+<% } %>
