@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URL).then( () =>{
 });
 
 //require the user model
-const User = require("./models/user");
+const User = require("./models/User");
 
 // view engine setup
 app.use(expressLayouts);
